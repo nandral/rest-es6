@@ -9,8 +9,8 @@
 * axios - for functional tests
 * mocha - as a test runner
 * chai - for BDD style assertion
-* supertest - for integration tests over HTTP (Super-agent driven library for testing node.js HTTP servers)
-* express - as Node.js web application framework
+* supertest - for integration tests (Super-agent driven library for testing node.js HTTP servers)
+* express - as Node.js web application framewnork
 
 **Start Development Server**
 ```
