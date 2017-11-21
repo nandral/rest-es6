@@ -1,4 +1,4 @@
-## Basic REST application developed using latest version of JavaScript like ES6, ES2017
+## Basic REST application developed using latest features of JavaScript part of ES6, ES2017
 
 #### Modern JavaScript features used
 * es2017 (async/await) - modern way of handling asynchronous JavaScript code
@@ -10,7 +10,8 @@
 * mocha - as a test runner
 * chai - for BDD style assertion
 * supertest - for integration tests (Super-agent driven library for testing node.js HTTP servers)
-* express - as Node.js web application framewnork
+* express - as Node.js web application framework
+* istanbul - for code coverage
 
 **Start Development Server**
 ```
