@@ -22,7 +22,7 @@ npm run dev
 npm test
 ```
 
-**Code Coverage
+**Code Coverage**
 ```
 npm run coverage
 ```
