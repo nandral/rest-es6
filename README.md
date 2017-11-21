@@ -15,7 +15,7 @@ npm run dev
 ```
 **Run test cases**
 ```
-npm run test
+npm test
 ```
 
 
