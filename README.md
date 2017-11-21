@@ -1,4 +1,4 @@
-## REST application developed using latest version of JavaScript like ES6, ES2017
+## Basic REST application developed using latest version of JavaScript like ES6, ES2017
 
 #### Modern JavaScript features used
 * es2017 (async/await) - modern way of handling asynchronous JavaScript code
@@ -20,6 +20,11 @@ npm run dev
 **Run test cases**
 ```
 npm test
+```
+
+**Code Coverage
+```
+npm run coverage
 ```
 
 
