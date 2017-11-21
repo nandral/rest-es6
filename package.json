@@ -7,7 +7,8 @@
     "start": "node index.js",
     "dev": "NODE_ENV=development PORT=5000 nodemon --watch . index.js",
     "test": "NODE_ENV=test PORT=6000 mocha --reporter progress --timeout 10000 'test/**/*.test.js' ",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "coverage":"PORT=7000 istanbul cover node_modules/.bin/_mocha -- test/**/*"
   },
   "engines": {
     "node": "8.1.1",
@@ -24,6 +25,7 @@
     "express": "^4.16.2",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "istanbul": "^0.4.5"
   }
 }
