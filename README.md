@@ -13,6 +13,11 @@
 npm install
 npm run dev
 ```
+**Run test cases**
+```
+npm run test
+```
+
 
 **Start Production Server**
 ```
