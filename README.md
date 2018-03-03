@@ -26,14 +26,6 @@ npm install
 npm start
 ```
 
-**Run Reckon Test1**
-
-http://localhost:9999
-
-**Run Reckon Test2**
-
-http://localhost:9999/test2
-
 #### Modern JavaScript features used
 
 * es2017 (async/await) - modern way of handling asynchronous JavaScript code
