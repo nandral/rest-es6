@@ -1,27 +1,34 @@
-const PORT = process.env.PORT||5000;
+const PORT = process.env.PORT || 9999;
 const express = require("express");
-const bodyParser =  require("body-parser");
-const service = require("./api/service");
+const bodyParser = require("body-parser");
+const inboundService = require("./api/inboundServiceTest1");
+const divisionService = require("./api/divisionService");
+const findPatterns = require("./api/findPatternsTest2");
 
-app = express();
+const app = express();
 app.use(bodyParser.json());
 
-
-app.get("/",(req,res)=>{
-	res.send({ hello:"Node WORLD !!!" })
+app.get("/", async (req, res) => {
+  try {
+    const inboundData = await inboundService.prepareInboundData();
+    const results = divisionService.processNumbers(inboundData);
+    res.send(results);
+  } catch (err) {
+    res.send(err.message);
+  }
 });
 
-app.post("/",(req,res)=>{
-	if(!req.body.payload || !Array.isArray(req.body.payload)){
-		return res.status(400).send({ error : "Could not decode request: JSON parsing failed" });
-	}
-	const processedRecords = service(req.body.payload)
-	res.status(201).send({response:processedRecords});
-})
+app.get("/test2", async (req, res) => {
+  try {
+    const results = await findPatterns.process();
+    res.send(results);
+  } catch (err) {
+    res.send(err.message);
+  }
+});
 
+app.listen(PORT, () => {
+  console.log(`Server started on ${PORT}`);
+});
 
-app.listen(PORT,()=>{
-	console.log(`Server started on ${PORT}`);
-})
-
-module.exports=app;
+module.exports = app;
